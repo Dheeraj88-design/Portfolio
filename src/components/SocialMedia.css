@@ -1,0 +1,36 @@
+.social-icons {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 35px;
+  }
+  
+  .social-icons li {
+    margin: 0 10px;
+    border: none;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  
+  .social-icons li{
+    font-size: 17px;
+    color: #ffffff;
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .social-icons a {
+    color: #000000;
+  }
+  .social-icons li:hover{
+    background-color: rgb(255 60 0);
+  }
+  .social-icons li:hover a{
+    color: #ffffff;
+  }
+  

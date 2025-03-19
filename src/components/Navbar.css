@@ -1,0 +1,121 @@
+/* Base Navbar Styles */
+.nav-wrap {
+    background-color: rgb(0 0 0 / 22%);
+    backdrop-filter: blur(24px);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    transition: background 0.3s ease;
+}
+
+/* Change color on scroll */
+.nav-wrap.scrolled {
+    background-color: black;  /* Changes to black on scroll */
+    backdrop-filter: blur(0);
+}
+
+/* Navbar content */
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+/* Desktop navigation */
+.nav-content ul {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.nav-content li {
+    margin-right: 25px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav-content li:hover {
+    color: #007bff; 
+}
+
+/* Contact button */
+.contact-btn {
+    background-color: #FF3C00;
+    padding: 8px 21px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #e63300;
+}
+
+/* Hamburger Icon */
+.hamburger-icon {
+    display: none;  /* Hidden on larger screens */
+    cursor: pointer;
+    color: white;
+    font-size: 28px;
+}
+
+/* Mobile Navigation Menu */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: black;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-nav.open {
+    display: block;
+    transform: translateY(0);
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.mobile-nav li {
+    padding: 15px;
+    color: white;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.mobile-nav li:hover {
+    color: #007bff;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .pc-nav {
+        display: none; /* Hide desktop nav on mobile */
+    }
+
+    .hamburger-icon {
+        display: block;  /* Show hamburger icon on mobile */
+    }
+
+    .mobile-nav {
+        display: none; /* Initially hidden */
+    }
+
+    .mobile-nav.open {
+        display: block;  /* Show when toggled */
+    }
+}

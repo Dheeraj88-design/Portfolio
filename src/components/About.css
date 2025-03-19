@@ -1,0 +1,46 @@
+.about-wrap{
+    padding: 80px 0;
+    background-image: url(../../public/assets/about-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center , center;
+}
+.about-wrap h3{
+    font-size: 48px;
+    font-weight: 600;
+}
+.line{
+    width: 100%;
+    height: 3px;
+    margin-bottom: 10px;
+    background-color: red;
+}
+.line {
+    width: 80%;
+    height: 4px;
+    margin: 20px 0;
+    background: #ccc;
+    position: relative;
+    overflow: hidden;
+  }
+  .dot {
+    width: 40px;
+    height: 20px;
+    background: #FF3C00;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: bounce 3s ease-in-out infinite alternate;
+  }
+  @keyframes bounce {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: calc(100% - 20px); /* Ensures dot stays inside the line */
+    }
+  }
+  .about-right-wrap img{
+    border-radius: 24px 24px 80px 274px;
+  }
