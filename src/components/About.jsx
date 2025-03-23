@@ -8,7 +8,7 @@ function About() {
           <div className="row align-items-center">
           <div className="col-lg-6 mt-lg-0 mt-3">
               <div className="about-right-wrap">
-                <img src="assets/about-image.jpg" alt="" srcset=""  className='w-100'/>
+                <img src={`${process.env.PUBLIC_URL}/assets/about-image.jpg`}alt="" srcset=""  className='w-100'/>
                 <div className="about-left">
                 </div>
               </div>

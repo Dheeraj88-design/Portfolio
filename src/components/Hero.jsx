@@ -34,14 +34,14 @@ const Hero = () => {
               </h2>
               <p className="mt-3">Hey, I'm Dheeraj! I design UIs, build websites, and debug my own decisions—one cup of coffee at a time!</p>
               <SocialMedia />
-              <a href="assets/Dheeraj_Resume.pdf" download="Dheeraj_Resume.pdf">
+              <a href={`${process.env.PUBLIC_URL}/assets/Dheeraj_Resume.pdf`} download="Dheeraj_Resume.pdf">
               <button className="cv">Download CV</button>
               </a>
             </div>
           </div>
           <div className="col-lg-6 mt-3 order-lg-2 order-1">
             <div className="hero-right">
-                <img src="assets/hero-profile.jpeg" alt="Profile" className="w-100"/>
+                <img src={`${process.env.PUBLIC_URL}/assets/hero-profile.jpeg`} alt="Profile" className="w-100"/>
             </div>
           </div>
         </div>
