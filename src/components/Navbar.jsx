@@ -62,7 +62,7 @@ const Navbar = () => {
         <div className={`mobile-nav ${menuOpen ? "open" : ""}`}>
           <ul>
             <li onClick={()=>Scroller("home")}>Home</li>
-            <li onClick={()=>Scroller("abou")}>About Me</li>
+            <li onClick={()=>Scroller("about")}>About Me</li>
             <li onClick={()=>Scroller("projects")}>Projects</li>
             <li onClick={()=>Scroller("skills")}>Skills</li>
             <li onClick={()=>Scroller("experience")}>Experience</li>
