@@ -61,7 +61,7 @@ const Skills = () => {
           </div>
           <div className="col-md-6 text-center">
             <div className="skills-image">
-              <img src="assets/skills.jpg" alt="" className="w-100"/>
+              <img src={`${process.env.PUBLIC_URL}/assets/skills.jpg`} alt="" className="w-100"/>
             </div>
           </div>
         </div>
