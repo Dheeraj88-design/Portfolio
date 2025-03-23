@@ -8,7 +8,7 @@ const Hero = () => {
     <div className="hero-wrap" id="home">
         <div className="background-wrap">
             <video autoPlay loop muted playsInline>
-            <source src="assets/bg-mp3.mp4" type="video/mp4" />
+            <source src={`${process.env.PUBLIC_URL}/assets/bg-mp3.mp4`} type="video/mp4" />
             Your browser does not support the video tag.
             </video>
         </div>  
