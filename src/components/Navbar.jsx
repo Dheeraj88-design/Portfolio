@@ -20,13 +20,20 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-  const Scroller=(id)=>{
+
+  const Scroller = (id) => {
     const section = document.getElementById(id);
-    if (section){
+  
+    if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      setMenuOpen(false); 
-    } 
-  }
+  
+      // Add the hash to the URL for GitHub Pages compatibility
+      window.location.hash = `#${id}`;
+  
+      setMenuOpen(false);
+    }
+  };
+  
 
   return (
     <div className={`nav-wrap ${isScrolled ? "scrolled" : ""}`}>
