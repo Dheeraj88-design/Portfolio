@@ -10,7 +10,6 @@ function About() {
               <div className="about-right-wrap">
                 <img src="assets/about-image.jpg" alt="" srcset=""  className='w-100'/>
                 <div className="about-left">
-
                 </div>
               </div>
             </div>
