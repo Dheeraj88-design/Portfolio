@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css';
 
-function About() {
+function About(){
   return ( 
     <div className='about-wrap' id='about'>
         <div className="container">

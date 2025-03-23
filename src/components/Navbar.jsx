@@ -21,19 +21,20 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
+  // Scroll and force hash navigation for GitHub Pages compatibility
   const Scroller = (id) => {
     const section = document.getElementById(id);
-  
+
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-  
-      // Add the hash to the URL for GitHub Pages compatibility
-      window.location.hash = `#${id}`;
-  
-      setMenuOpen(false);
+      // Ensure section is rendered before scrolling
+      setTimeout(() => {
+        section.scrollIntoView({ behavior: "smooth" });
+        window.location.hash = `#${id}`; // Force GitHub to recognize the hash
+      }, 100);  // Small delay ensures it works properly on GitHub Pages
     }
+
+    setMenuOpen(false);
   };
-  
 
   return (
     <div className={`nav-wrap ${isScrolled ? "scrolled" : ""}`}>
@@ -46,12 +47,12 @@ const Navbar = () => {
           {/* Desktop navigation */}
           <div className="nav-lists pc-nav">
             <ul>
-              <li onClick={()=>Scroller("home")}>Home</li>
-              <li onClick={()=>Scroller("about")}>About Me</li>
-              <li onClick={()=>Scroller("projects")}>Projects</li>
-              <li onClick={()=>Scroller("skills")}>Skills</li>
-              <li onClick={()=>Scroller("experience")}>Experience</li>
-              <li onClick={()=>Scroller("contact")}>Contact</li>
+              <li onClick={() => Scroller("home")}>Home</li>
+              <li onClick={() => Scroller("about")}>About Me</li>
+              <li onClick={() => Scroller("projects")}>Projects</li>
+              <li onClick={() => Scroller("skills")}>Skills</li>
+              <li onClick={() => Scroller("experience")}>Experience</li>
+              <li onClick={() => Scroller("contact")}>Contact</li>
             </ul>
           </div>
 
@@ -61,19 +62,19 @@ const Navbar = () => {
           </div>
 
           <div className="nav-btns">
-            <button className="contact-btn" onClick={()=>Scroller("contact")}>Contact</button>
+            <button className="contact-btn" onClick={() => Scroller("contact")}>Contact</button>
           </div>
         </div>
 
         {/* Mobile navigation menu */}
         <div className={`mobile-nav ${menuOpen ? "open" : ""}`}>
           <ul>
-            <li onClick={()=>Scroller("home")}>Home</li>
-            <li onClick={()=>Scroller("about")}>About Me</li>
-            <li onClick={()=>Scroller("projects")}>Projects</li>
-            <li onClick={()=>Scroller("skills")}>Skills</li>
-            <li onClick={()=>Scroller("experience")}>Experience</li>
-            <li onClick={()=>Scroller("contact")}>Contact</li>
+            <li onClick={() => Scroller("home")}>Home</li>
+            <li onClick={() => Scroller("about")}>About Me</li>
+            <li onClick={() => Scroller("projects")}>Projects</li>
+            <li onClick={() => Scroller("skills")}>Skills</li>
+            <li onClick={() => Scroller("experience")}>Experience</li>
+            <li onClick={() => Scroller("contact")}>Contact</li>
           </ul>
         </div>
       </div>

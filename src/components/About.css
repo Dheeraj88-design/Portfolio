@@ -1,6 +1,6 @@
 .about-wrap{
     padding: 80px 0;
-    background-image: url(../../public/assets/about-bg.png);
+    /* background-image: url(../assets/about-bg.png); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center , center;
